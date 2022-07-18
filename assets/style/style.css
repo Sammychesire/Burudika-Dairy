@@ -83,6 +83,23 @@ th, td {
   text-align: left;
   border-bottom: 1px solid #DDD;
 }
+.yearly{
+    width: 90vw;
+    margin: 50px auto;
+}
+.yearly table{
+    width: 100%;
+    padding: 10px;
+}
+.totals td{
+    border-bottom: none;
+}
+.totals{
+    /* background: #fff; */
+    /* color: #000; */
+    font-size: 1.2rem;
+    font-weight: bold;
+}
 .section1{
     width: 90vw;
     display: flex;
@@ -92,6 +109,13 @@ th, td {
 }
 .btnPrice{
     margin-top: 10px;
+    border: none;
+    padding: 10px 20px;
+    background: #234857;
+    color: white;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
 }
 .section1 h3{
     margin: 5px 0;
