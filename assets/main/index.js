@@ -21,3 +21,16 @@ function totalProduction(shedA, shedB, shedC, shedD) {
     dailyTable[dailyTable.length - 1].textContent = daySum;
     weeklyProduction(shedA, shedB, shedC, shedD, daySum);
   }
+  function weeklyProduction(shedA, shedB, shedC, shedD, daysTotal) {
+    weeklyTable.forEach((element, index) => {
+      element.textContent = Number(arguments[index]) * DAYS_OF_WEEK;
+    });
+    incomeOverTime(sellingPrice, daysTotal);
+    getYearlyStats(daySum, sellingPrice);
+  }
+  const incomeOverTime = (sellingPrice, opDay, time = 1) => {
+    weeklyIncome.textContent = sellingPrice * opDay * DAYS_OF_WEEK;
+    yearlyIncome.textContent = sellingPrice * opDay * DAYS_IN_YEAR;
+    yrTotals.textContent = opDay * DAYS_IN_YEAR;
+    totalIncome.textContent = sellingPrice * opDay * DAYS_IN_YEAR;
+  };
