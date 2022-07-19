@@ -4,6 +4,14 @@
     box-sizing: border-box;
     font-family: fantasy;
 }
+@media screen and (max-width: 1200px){
+    table{
+        width: 100%;
+    }
+    .form{
+        width: 100%;
+    }
+}
 body{
     background: white;
     color: #234857;
@@ -13,6 +21,7 @@ body{
     top: 40px;
     font-size: 30px;
     left: 20px;
+    font-family: monospace;
 }
 header{
     width: 100vw;
