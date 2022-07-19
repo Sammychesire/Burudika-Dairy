@@ -11,3 +11,13 @@ const DAYS_OF_WEEK = 7;
 const DAYS_IN_YEAR = 365;
 let sellingPrice = 45;
 let daySum = 0;
+function totalProduction(shedA, shedB, shedC, shedD) {
+    Array.from(dailyTable)
+      .slice(0, dailyTable.length - 1)
+      .forEach((element, index) => {
+        element.textContent = arguments[index];
+        daySum += Number(arguments[index]);
+      });
+    dailyTable[dailyTable.length - 1].textContent = daySum;
+    weeklyProduction(shedA, shedB, shedC, shedD, daySum);
+  }
