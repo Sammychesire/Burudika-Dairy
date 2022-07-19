@@ -34,3 +34,26 @@ function totalProduction(shedA, shedB, shedC, shedD) {
     yrTotals.textContent = opDay * DAYS_IN_YEAR;
     totalIncome.textContent = sellingPrice * opDay * DAYS_IN_YEAR;
   };
+  let shedALitres;
+let shedBLitres;
+let shedCLitres;
+let shedDLitres;
+
+const noOfDays = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+
+form.addEventListener("submit", (event) => {
+  event.preventDefault();
+  daySum = 0;
+  shedBLitres = Number(form["shedB"].value);
+  shedALitres = Number(form["shedA"].value);
+  shedCLitres = Number(form["shedC"].value);
+  shedDLitres = Number(form["shedD"].value);
+  totalProduction(shedALitres, shedBLitres, shedCLitres, shedDLitres);
+});
+
+changePrice.addEventListener("click", () => {
+  let input = prompt("Enter new selling price (Ksh/lit):");
+  sellingPrice = Number(input) ? Number(input) : sellingPrice;
+  price.textContent = sellingPrice;
+  totalProduction(shedALitres, shedBLitres, shedCLitres, shedDLitres);
+});
